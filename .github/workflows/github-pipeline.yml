@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy Node.js app to Azure Web App - TaskManagerUI
 
 on:
@@ -55,4 +58,4 @@ jobs:
           app-name: 'TaskManagerUI'
           slot-name: 'production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_e96fcccdbba741bfbb6c1c3164db3194 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_4933297071bd44dea5939f59284cd990 }}

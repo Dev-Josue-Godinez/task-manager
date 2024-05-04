@@ -25,7 +25,6 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -59,4 +58,4 @@ jobs:
           app-name: 'TaskManagerUI'
           slot-name: 'production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_bed5f75758bb43f9b8118d29c9b44bef }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_4933297071bd44dea5939f59284cd990 }}

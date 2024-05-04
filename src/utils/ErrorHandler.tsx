@@ -5,11 +5,11 @@ export const handleError = (error: any) => {
   if (axios.isAxiosError(error)) {
     let err = error.response;
     if (Array.isArray(err?.data.errors)) {
-      for (let val of err.data.errors) {
+      for (let val of err?.data.errors) {
         toast.warning(val.description);
       }
     } else if (typeof err?.data.errors === "object") {
-      for (let val of err.data.errors) {
+      for (let val of err?.data.errors) {
         toast.warning(err.data.errors[val][0]);
       }
     } else if (err?.data) {

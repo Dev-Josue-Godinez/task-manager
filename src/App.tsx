@@ -2,12 +2,15 @@ import "./App.css";
 import { Outlet } from "react-router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserProvider } from "./hooks/useAuth";
 
 function App() {
   return (
     <>
-      <Outlet />
-      <ToastContainer />
+      <UserProvider>
+        <Outlet />
+        <ToastContainer />
+      </UserProvider>
     </>
   );
 }
